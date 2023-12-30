@@ -10,7 +10,12 @@
 </head>
 <body>
     <h1><%= quote %></h1>
-    <h2>- <%= author %></h2>
+    <% if (locals.author === '') { %>
+     <h2>- Anonymous</h2>
+    <% } else {%>
+        <h2>- <%= author %></h2>
+    <% } %>
+    
     
 </body>
 </html>
